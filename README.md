@@ -53,7 +53,7 @@ This is an example of how to list things you need to use the software and how to
 
 ## FlowChart Methodology
 
-![image](https://user-images.githubusercontent.com/42894689/133927874-325233e7-5954-4c67-aa4c-ac148425976f.png)
+<img src="https://github.com/zabhitak/recruitData/blob/master/Screenshot/flowchart.PNG"  align="center" alt=""/>
 
 ## UI Screenshots
 
