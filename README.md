@@ -95,9 +95,9 @@ This is an example of how to list things you need to use the software and how to
 
 
 
-<img src="https://github.com/zabhitak/recruitData/blob/master/Screenshot/models.PNG"  height="500px;"width="480px;"alt=""/>
+<img src="https://github.com/zabhitak/recruitData/blob/master/Screenshot/models.PNG" alt=""/>
 
 
-<img src="https://github.com/zabhitak/recruitData/blob/master/Screenshot/hyper.PNG"  height="500px;"width="480px;"alt=""/>
+<img src="https://github.com/zabhitak/recruitData/blob/master/Screenshot/hyper.PNG"  alt=""/>
 
 
