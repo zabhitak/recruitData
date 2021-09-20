@@ -78,24 +78,6 @@ This is an example of how to list things you need to use the software and how to
 
 
 
-## GIF showing process for one example:
-
-![GP-Finder-Google-Chrome-2021-09](https://user-images.githubusercontent.com/42894689/133877523-f04ef32d-aa69-447d-b071-8f11b96956be.gif)
-
-## Input example:
-
-![image](https://user-images.githubusercontent.com/42894689/133873866-991ccd4e-15b2-4def-a470-a0bc1c6b5823.png)
-
-![image](https://user-images.githubusercontent.com/42894689/133873892-91684f35-768f-43d8-8708-dbd9d6a57489.png)![image](https://user-images.githubusercontent.com/42894689/133873951-7cc75ca7-7e55-4848-95a9-47e0ed80bdbd.png)
-
-
-## Output example:
-
-![image](https://user-images.githubusercontent.com/42894689/133873803-c3861250-856d-426a-a65a-2880475e1b5d.png)
-
-![image](https://user-images.githubusercontent.com/42894689/133873777-5e40c0d4-5f46-4bce-a255-ae5f05b129c0.png)
-
-
 ## Challenges
 
 1. Google Authentication for third party apps: Allow access in security settings of your account.
