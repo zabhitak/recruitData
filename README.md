@@ -94,26 +94,10 @@ This is an example of how to list things you need to use the software and how to
 2. Mail account where you will receive the result.
 
 
-## Creating dummy dataset to test the code
-```
-#Creating a csv
-rollNumbers = []
-marks = []
-for i in range(0,357):
-  if len(str(i)) == 1:
-    rollNumbers.append('10180368' + str(i))
-  elif len(str(i)) == 2:
-    rollNumbers.append('1018037' + str(i))
-  else:
-    rollNumbers.append('101803' + str(i))
-  marks.append(random.randrange(30, 100))
 
-data = {}
-data['roll'] = rollNumbers
-data['marks'] = marks
+<img src="https://github.com/zabhitak/recruitData/blob/master/Screenshot/models.PNG"  height="500px;"width="480px;"alt=""/>
 
-finalDataset = pd.DataFrame.from_dict(data)
-finalDataset.to_csv('scores.csv')
-```
 
-![image](https://user-images.githubusercontent.com/42894689/133393181-d7a2935f-1cd3-4995-b539-cd8e42279804.png)
+<img src="https://github.com/zabhitak/recruitData/blob/master/Screenshot/hyper.PNG"  height="500px;"width="480px;"alt=""/>
+
+
