@@ -100,3 +100,7 @@ This is an example of how to list things you need to use the software and how to
 4. Heroku (Hosting website)
 
 ![image](https://user-images.githubusercontent.com/42894689/133317602-42753fcb-f12e-45b5-8983-715964902754.png)
+
+## Resources 
+
+Krish Naik
