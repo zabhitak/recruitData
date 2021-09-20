@@ -7,29 +7,36 @@
     <title>Document</title>
 </head>
 
-<body>
+<body style="background-image: url('https://therichrecruiter.com/wp-content/uploads/2018/04/cropped-FullSizeRender-3.jpg');background-repeat: no-repeat;background-attachment: fixed;background-size: fit;background-color: rgb(20, 2, 2);">
 
-    <div style="color:blue">
+    <div style="color:rgb(15, 13, 1)">
         <form action="{{ url_for('predict')}}" method="post">
             <h2>Predictive analysis</h2>
-            <!-- <h3>Year</h3>
-            <input id="first" name="Year" type="number "> -->
-            <h3>What is the level of qualification</h3><br><input id="second" name="Present_Price" required="required">
-            <h3>CGPA</h3><input id="third" name="Kms_Driven" required="required">
-            <h3>Experience</h3><br><input id="fourth" name="Owner" required="required">
-            <h3>Source id</h3><br><select name="Fuel_Type_Petrol" id="fuel" required="required">
-                <option value="Petrol">Referal</option>
-                <option value="Diesel">Linkedin</option>
+            <h3>Choose your Education</h3>
+
+
+            <select name="Education" id="fuel" required="required" >
+                <option value="1">MCA/ME</option>
+                <option value="2">MS/MTech</option>
+                <option value="3">BSc/BCS</option>
+                <option value="5">BE</option>
+                <option value="4">Other</option>
                 <!-- <option value="Diesel">CNG</option> -->
             </select>
-            <!-- <h3>Are you A Dealer or Individual</h3><br><select name="Seller_Type_Individual" id="resea" required="required">
-                <option value="Dealer">Dealer</option>
-                <option value="Individual">Individual</option>
-            </select> -->
-            <!-- <h3>Transmission type</h3><br><select name="Transmission_Mannual" id="research" required="required">
-                <option value="Mannual">Manual Car</option>
-                <option value="Automatic">Automatic Car</option>
-            </select> -->
+
+            <h3>What is your current CGPA</h3><br><input id="second" name="CGPA" required="required" placeholder="Fill you CGPA out of 10 eg, 9.58">
+            <h3>Years of Experience</h3><input id="third" name="Experience" required="required" placeholder="Fill you experience 10 eg, 4">
+
+            <h3>Source Id</h3><br><select name="SourceId" id="fuel" required="required">
+                <option value="Indeed">Indeed</option>
+                <option value="Shine">Shine</option>
+                <option value="Naukri">Naukri</option>
+                <option value="LinkedIn">LinkedIn</option>
+                <option value="Consultant2">Consultant2</option>
+                <option value="Referral">Referral</option>
+     
+            </select>
+  
             <br><br><button id="sub" type="submit ">Calculate the importance</button>
             <br>
 
@@ -74,15 +81,16 @@
         }
         
         #fuel {
-            width: 83px;
-            height: 43px;
+            width: 153px;
+            height: 33px;
             text-align: center;
             border-radius: 14px;
-            font-size: 20px;
+            font-size: 15px;
+            margin-top: 5px;
         }
         
         #fuel:hover {
-            background-color: coral;
+            background-color: rgba(241, 242, 243, 0.788);
         }
         
         #research {
@@ -97,28 +105,18 @@
             background-color: coral;
         }
         
-        #resea {
-            width: 99px;
-            height: 43px;
-            text-align: center;
-            border-radius: 14px;
-            font-size: 18px;
-        }
-        
-        #resea:hover {
-            background-color: coral;
-        }
         
         #sub {
-            width: 120px;
-            height: 43px;
+            width: 180px;
+            height: 83px;
             text-align: center;
             border-radius: 14px;
+            margin-top: 25px;
             font-size: 18px;
         }
         
         #sub:hover {
-            background-color: darkcyan;
+            background-color: rgb(247, 201, 0);
         }
         
         #first {
@@ -131,14 +129,16 @@
         #second {
             border-radius: 14px;
             height: 25px;
-            font-size: 20px;
+            width: 295px;
+            font-size: 15px;
             text-align: center;
         }
         
         #third {
             border-radius: 14px;
             height: 25px;
-            font-size: 20px;
+            width: 295px;
+            font-size: 15px;
             text-align: center;
         }
         

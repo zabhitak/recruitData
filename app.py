@@ -3,10 +3,11 @@ import jsonify
 import requests
 import pickle
 import numpy as np
+import pandas as pd
 import sklearn
 from sklearn.preprocessing import StandardScaler
 app = Flask(__name__)
-model = pickle.load(open('xgboost.pkl', 'rb'))
+model = pickle.load(open('xgboostmo.pkl', 'rb'))
 @app.route('/',methods=['GET'])
 def Home():
     return render_template('index.html')
@@ -15,37 +16,54 @@ def Home():
 standard_to = StandardScaler()
 @app.route("/predict", methods=['POST'])
 def predict():
-    Fuel_Type_Diesel=0
+    Source_Type=1
+    Edu_Type=1
     if request.method == 'POST':
-        # Year = int(request.form['Year'])
-        Present_Price=float(request.form['Present_Price'])
-        Kms_Driven=int(request.form['Kms_Driven'])
-        # Kms_Driven2=np.log(Kms_Driven)
-        Owner=int(request.form['Owner'])
-        Fuel_Type_Petrol=request.form['Fuel_Type_Petrol']
-        if(Fuel_Type_Petrol=='Referal'):
-                Fuel_Type_Petrol=6
-                Fuel_Type_Diesel=0
+        Education = int(request.form['Education'])
+
+        if(Education=='1'):
+            Edu_Type=4
+        elif Education=='2':
+            Edu_Type=5
+        elif Education=='3':
+            Edu_Type=2
+        elif Education=='5':
+            Edu_Type=3
         else:
-            Fuel_Type_Petrol=0
-            Fuel_Type_Diesel=1
-        # Year=2020-Year
-        # Seller_Type_Individual=request.form['Seller_Type_Individual']
-        # if(Seller_Type_Individual=='Individual'):
-        #     Seller_Type_Individual=1
-        # else:
-        #     Seller_Type_Individual=0	
-        # Transmission_Mannual=request.form['Transmission_Mannual']
-        # if(Transmission_Mannual=='Mannual'):
-        #     Transmission_Mannual=1
-        # else:
-        #     Transmission_Mannual=0
-        prediction=model.predict([[Present_Price,Kms_Driven,Owner,Fuel_Type_Diesel]])
+            Edu_Type=1
+
+
+        CGPA=float(request.form['CGPA'])
+        Experience=int(request.form['Experience'])
+        SourceId=request.form['SourceId']
+
+        if(SourceId=='Indeed'):
+            Source_Type=1
+        elif SourceId=='Shine':
+            Source_Type=2
+        elif SourceId=='Naukri':
+            Source_Type=3
+        elif SourceId=='LinkedIn':
+            Source_Type=4
+        elif SourceId=='Consultant2':
+            Source_Type=5
+        else:
+            Source_Type=6
+       
+        d = {'QualLevel': [Edu_Type], 'CGPA': [CGPA],'CurrentExperience': [Experience], 'SourceId': [Source_Type]}
+        de = pd.DataFrame(data=d)
+        prediction=model.predict(de)
         output=round(prediction[0],2)
         if output<0:
-            return render_template('index.html',prediction_texts="Sorry you cannot sell this car")
+            return render_template('index.html',prediction_texts="Sorry wrong input try again")
         else:
-            return render_template('index.html',prediction_text="You Can Sell The Car at {}".format(output))
+            if output == 3:
+                output = 95
+            if output == 2:
+                output = 80
+            if output == 1:
+                output = 65
+            return render_template('index.html',prediction_text="Your Chances of selection are {} %".format(output))
     else:
         return render_template('index.html')
 
