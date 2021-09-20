@@ -80,19 +80,18 @@ This is an example of how to list things you need to use the software and how to
 
 ## Challenges
 
-1. Google Authentication for third party apps: Allow access in security settings of your account.
-2. File upload error for invalid files: Only allow certain extensions to be uploaded.
-3. HTML template was not getting extended to other pages correctly: Use "{% block .. %}" and "{% endblock %}" to rectify.
+1. Input list is not allowed in xgbost, so make it as dataframe.
+2. Hyperparameter for different cross validations.
+3. Deploying on heroku using flask.
 
 ## Future Scope
 
 1. Account authentication for different users who use this website.
+2. More fields could be added in the dataset such as skills, branch to make model more useful.
 
 ## Requirements
 
 1. Working Internet connection (around 2 Mbps)
-2. Mail account where you will receive the result.
-
 
 
 <img src="https://github.com/zabhitak/recruitData/blob/master/Screenshot/models.PNG" alt=""/>
